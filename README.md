@@ -11,3 +11,7 @@ classification in the following manner:
 train CPCSC model in the following manner:
 
      python3 train.py
+     
+CSC4 dataset please see https://pan.baidu.com/s/1nik1M2oXKLKIcqslGJhcaQ
+
+password:5376
