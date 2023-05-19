@@ -8,6 +8,6 @@ classification in the following manner:
 
      python3 audio_monitor.py
      
-train CPCSC in the following manner:
+train CPCSC model in the following manner:
 
      python3 train.py
