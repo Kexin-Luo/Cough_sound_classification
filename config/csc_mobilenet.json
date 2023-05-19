@@ -4,7 +4,7 @@
 	"dataaug": false,
 	"pretrained": false,
 	"scheduler": true,
-	"model": "densenet",
+	"model": "mobilenet",
 	"batch_size": 32,
 	"num_workers": 1,
 	"epochs": 70,

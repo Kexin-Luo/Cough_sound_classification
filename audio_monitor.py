@@ -15,7 +15,7 @@ from detect_audios import soundEventsDetect
 # 读取mp3的波形数据
 
 
-def getaudioname():
+def getaudioname(audio_dir):
     dataname=os.listdir(audio_dir)
     list=[]
     for i in dataname:
@@ -112,14 +112,7 @@ def classification(namelist,model_path):
         if res==3:
             print("noncough")
 if __name__ == '__main__':
-    silent = AudioSegment.silent(duration=5000)
-    name = 'croup.wav'
-    loud_quiet = AudioSegment.from_file(name)
-    # Normalize the sound levels
-    normalized_loud_quiet = normalize(loud_quiet)
-    # Check the sound
-    play(normalized_loud_quiet)
-    # region.plot()
+
     # model_path = "model/mel_senet_3.pkl"
     # model_path_inception = "model/mel_inception_3.pkl"
     # model_path_lstm = "model/mel_lstm_3.pkl"
@@ -127,10 +120,10 @@ if __name__ == '__main__':
     # model_path_mobilenet = "model/mel_mobilenet_3.pkl"
     # model_path_resnet = "model/mel_resnet_3.pkl"
     # model_path_resnext = "model/mel_resnext_3.pkl"
-    # model_path_senet = "model/mel_senet_3.pkl"
-    # audio_dir = "detect_audios"
-    # namelist=getaudioname()
-    # classification(namelist,model_path_lstm)
+    model_path_senet = "model/mel_senet_3.pkl"
+    audio_dir = "detect_audios"
+    namelist=getaudioname(audio_dir)
+    classification(namelist,model_path_senet)
 
     # end.record()
     # torch.cuda.synchronize()

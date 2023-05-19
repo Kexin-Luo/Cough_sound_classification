@@ -14,7 +14,7 @@ import models.inception
 import models.myCNN
 import models.ResneXt
 import models.Mel_CNN
-import models.densenet
+import models.mobileNet
 import models.SqueezeNet
 import models.lstm
 import time
@@ -104,12 +104,12 @@ resnet_config_dir = "config/csc_resnet.json"
 inception_config_dir = "config/csc_inception.json"
 resnext_config = "config/csc_resneXt.json"
 mel_cnn_config_dir = "config/csc_MEL_CNN.json"
-densenet_dir="config/csc_densenet.json"
-squeezenet_dir="config/squeezenet.json"
+mobilenet_dir= "config/csc_mobilenet.json"
+lstm_dir="config/csc_lstm.json"
 
 if __name__ == "__main__":
     args = parser.parse_args(args=[])
-    params = utils.Params(densenet_dir)
+    params = utils.Params(cnn_config_dir)
 #    params = utils.Params(config_dir)
     # print(params.num_workers)
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
@@ -138,8 +138,9 @@ if __name__ == "__main__":
             model = models.resnet.eca_resnet50().to(device)
         elif params.model == "inception":
             model = models.inception.Inception(params.pretrained).to(device)
-        elif params.model == "densenet":
-#             model=models.densenet.DenseNet().to(device)
+        elif params.model == "mobilenet":
+            model=models.mobileNet.MobileNet().to(device)
+        elif params.model == "lstm":
             model=models.lstm.RNN().to(device)
         elif params.model == "resneXt":
             model=models.ResneXt.resnext50_32x4d().to(device)

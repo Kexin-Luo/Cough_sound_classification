@@ -2,9 +2,9 @@ import torch
 import torch.nn as nn
 import torchvision.models as models
 from thop import profile
-class DenseNet(nn.Module):
+class MobileNet(nn.Module):
     def __init__(self, pretrained=False):
-        super(DenseNet, self).__init__()
+        super(MobileNet, self).__init__()
 #         num_classes =4
         self.model = models.mobilenet_v2()
         print("mobilenet")
@@ -17,7 +17,7 @@ class DenseNet(nn.Module):
         output = self.model(x)
         return output
 if __name__ == '__main__':
-    model = DenseNet()
+    model = MobileNet()
     input = torch.randn(1, 3, 128, 250)
     flops, params = profile(model, (input,))
     print('flops: ', flops, 'params: ', params)
