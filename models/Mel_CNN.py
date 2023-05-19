@@ -6,7 +6,7 @@ class Mel_CNN(nn.Module):
     def __init__(self):
         super(Mel_CNN,self).__init__()
         layer1=nn.Sequential()
-        layer1.add_module('conv1',nn.Conv2d(in_channels=1,out_channels=16,kernel_size=3,stride=1,padding=1))
+        layer1.add_module('conv1',nn.Conv2d(in_channels=3,out_channels=16,kernel_size=3,stride=1,padding=1))
         layer1.add_module('relu1',nn.ReLU(True))
         layer1.add_module('pool1',nn.MaxPool2d(2,2))
 #         layer1.add_module('attention1',SELayer_2d(16))
