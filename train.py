@@ -14,8 +14,7 @@ import models.inception
 import models.myCNN
 import models.ResneXt
 import models.Mel_CNN
-import models.mobileNet
-import models.SqueezeNet
+import models.densenet
 import models.lstm
 import time
 import dataloaders.datasetnormal
