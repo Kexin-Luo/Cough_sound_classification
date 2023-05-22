@@ -1,0 +1,16 @@
+{
+	"dataset_name": "CSC",
+	"data_dir": "./dataset/csc4/store/",
+	"config": "mel_cnn_config_dir",
+	"dataaug": false,
+	"pretrained": false,
+	"scheduler": true,
+	"model": "Mel_CNN",
+	"batch_size": 32,
+	"num_workers": 0,
+	"epochs": 70,
+	"lr": 1e-4,
+   "weight_decay": 1e-3,
+   "num_folds":5,
+   "checkpoint_dir": "./MEL-CNN"
+}
