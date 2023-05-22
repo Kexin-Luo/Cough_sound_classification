@@ -17,4 +17,4 @@ csc4 dataset please see https://pan.baidu.com/s/1nik1M2oXKLKIcqslGJhcaQ
 password:5376
 
 Please change the dataset name 'CSC4' to 'csc4'
-and the Contents is dataset-csc4-meta and store
+and the Content is dataset-csc4-meta and store
